@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #0A1828;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* navbar*/
+
+nav{
+    width: 100%;
+    position: fixed-top;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.5) ;
+    z-index: 10;
+}
+
+#nav-bg{
+    background-color: #0A1828;
+}
+.nav-link{
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.nav-link {
+    border: none;
+    background: none;
+    padding: 3px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 15px 30px;
+  }
+  
+  .nav-link:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height:0;
+    background-color: #0FFCBE;
+    transition: 0.3s ease;
+    z-index: -1;
+    border-radius: 20px;
+  }
+  
+  .nav-link:hover{
+    color: #0A1828 !important;
+    cursor: pointer;
+  }
+  .nav-link:hover:before{
+    width: 100%;
+    height: 70%;
+  }
+
+/* manoj */
+
+ #manoj{
+    font-family: neon;
+    src: url(https://dl.dropbox.com/s/df4zz9y6lmhocr9/England.otf?dl=0)
+  }
+  
+  #manoj{
+    position:fixed;
+    margin-top: 0;
+    height:1vh;
+    line-height:1vh;
+    font-size:20vh;
+    font-family:neon;
+    color:white;
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);
+    animation: flicker 7s infinite;
+    filter:brightness(1);
+  }
+  
+  @keyframes flicker{
+    9%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    10%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    11%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    12%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    13%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    66%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    67%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    75%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    76%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+  }
+
+/* typewriter effect */
+
+#typewriter{
+    display: inline;
+    color: #fff;
+    font-family: poppins;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+     /* Gives tshat scrolling effect as the typing happens */ /* Adjust as needed */
+    animation:
+      typing 3.5s steps(30,end),
+      blink-caret .5s step-end infinite;
+    animation-iteration-count: infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 51% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #0A1828}
+  }
+
+/*home*/
+
+
+#image img{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+#home{
+    width: 100%;
+    padding: 4% 10%;
+    background-color: #0A1828;
+}
+#button{
+    background-color: transparent;
+    color: #F2F0EA;
+    border: 2px solid goldenrod;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#button:hover{
+    background-color: goldenrod;
+    border:2px solid;
+    color: black;
+    animation: shakeBtn .7s both;
+    transform: translate3d(-1px,0,0);
+
+    box-shadow: 0 0 11px rgba(242,240,234,.3);
+}
+@keyframes shakeBtn{
+    0%,
+    90%{
+        transform: translate3d(-1px,0,0);
+    }
+    20%, 80%{
+        transform: translate3d(2px,0,0);
+    }
+    30%, 50%, 70%{
+        transform: translate3d(-4px,0,0);
+    }
+    40%, 60%{
+        transform: translate3d(4px,0,0);
+    }
+}
+
+/* skills*/
+
+#skills{
+    width: 100%;
+    padding: 3% 10%;
+    background-color: #0A1828;
+}
+
+#html-img{
+ width: 14%;
+ height: 8%;   
+}
+
+#css-img{
+    width: 14%;
+    height: 8%;   
+   }
+
+#js-img{
+    width: 14%;
+    height: 8%;   
+   }
+
+#boot-img{
+    width: 14%;
+    height: 8%;   
+   }
+
+#react-img{
+    width: 14%;
+    height: 8%;   
+   }
+
+#tailwind-img{
+    width: 14%;
+    height: 8%;
+}
+
+#node-img{
+    width: 14%;
+    height: 8%;
+}
+
+#express-img{
+    width: 14%;
+    height: 8%;
+}
+
+#sql-img{
+    width: 14%;
+    height: 8%;
+}
+
+#mongo-img{
+    width: 14%;
+    height: 8%;
+}
+
+#git-img{
+    width: 18%;
+    height: 12%;
+}
+
+#github-img{
+    width: 18%;
+    height: 12%;
+}
+
+#bash-img{
+    width: 18%;
+    height: 12%;
+}
+
+/* projects */
+
+#projects{
+    width: 100%;
+    padding: 5% 5%;
+    background-color: #0A1828;
+}
+
+#stock{
+    border: 2px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#stock a{
+    text-decoration: none;
+}
+
+#stock-img{
+    width: 87%;
+    height: 30%;
+    border-radius: 10px;
+}
+#stock h5{
+    color:#FFD43A;
+    font-size: 23px;
+}
+#stock:hover{
+    background-color: #F2F0EA;
+    border: 3px solid #0FFCBE;
+}
+
+#weather{
+    border: 2px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#weather a{
+    text-decoration: none;
+}
+
+#weather-img{
+    width: 87%;
+    height: 30%;
+    border-radius: 10px;
+}
+#weather h5{
+    color:#FFD43A;
+    font-size: 23px;
+}
+#weather:hover{
+    background-color: #F2F0EA;
+    border: 3px solid #0FFCBE;
+}
+
+#clash-90s{
+    border: 2px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#clash-90s a{
+    text-decoration: none;
+}
+
+#clash-90s-img{
+    width: 87%;
+    height: 30%;
+    border-radius: 10px;
+}
+#clash-90s h5{
+    color: #FFD43A;
+    font-size: 23px;
+}
+#clash-90s:hover{
+    background-color: #F2F0EA;
+    border: 3px solid #0FFCBE;
+}
+
+#calculator{
+    border: 2px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#calculator a{
+    text-decoration: none;
+}
+
+#calculator-img{
+    width: 87%;
+    height: 30%;
+    border-radius: 10px;
+}
+#calculator h5{
+    color: #FFD43A;
+    font-size: 23px;
+}
+#calculator:hover{
+    background-color: #F2F0EA;
+    border: 3px solid #0FFCBE;
+}
+
+#bar{
+    border: 2px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#bar a{
+    text-decoration: none;
+}
+
+#bar-img{
+    width: 87%;
+    height: 30%;
+    border-radius: 10px;
+}
+#bar h5{
+    color: #FFD43A;
+    font-size: 23px;
+}
+#bar:hover{
+    background-color: #F2F0EA;
+    border: 3px solid #0FFCBE;
+}
+
+#gaming{
+    border: 2px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#gaming a{
+    text-decoration: none;
+}
+
+#gaming-img{
+    width: 87%;
+    height: 30%;
+    border-radius: 10px;
+}
+#gaming h5{
+    color: #FFD43A;
+    font-size: 23px;
+}
+#gaming:hover{
+    background-color: #F2F0EA;
+    border: 3px solid #0FFCBE;
+}
+
+/*credits*/
+
+#credit{
+    width: 100%;
+    padding: 4% 3%;
+    background-color: #0A1828;
+}
+
+#fullstack-credit{
+    border: 1.5px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#fullstack-credit a{
+    text-decoration: none;
+}
+
+#fullstack-credit-img{
+    border-radius: 7px;
+}
+#fullstack-credit button{
+    background-color: #F2F0EA;
+    color: #582C12;
+    font-size: 23px;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+
+#fullstack-credit:hover{
+    border: 3px solid #F2F0EA;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+#fullstack-credit button:hover{
+    background-color: #BFA181;
+    color: #F2F0EA;
+}
+
+#reactjs-credit{
+    border: 1.5px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#reactjs-credit a{
+    text-decoration: none;
+}
+
+#reactjs-credit-img{
+    border-radius: 7px;
+}
+
+#reactjs-credit button{
+    background-color: #F2F0EA;
+    color: #582C12;
+    font-size: 23px;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+
+#reactjs-credit:hover{
+    border: 3px solid #F2F0EA;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+#reactjs-credit button:hover{
+    background-color: #BFA181;
+    color: #F2F0EA;
+}
+
+#js-credit{
+    border: 1.5px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#js-credit a{
+    text-decoration: none;
+}
+
+#js-credit-img{
+    border-radius: 7px;
+}
+
+#js-credit button{
+    background-color: #F2F0EA;
+    color: #582C12;
+    font-size: 23px;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+
+#js-credit:hover{
+    border: 3px solid #F2F0EA;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+#js-credit button:hover{
+    background-color: #BFA181;
+    color: #F2F0EA;
+}
+
+#python-credit{
+    border: 1.5px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#python-credit a{
+    text-decoration: none;
+}
+
+#python-credit-img{
+    border-radius: 7px;
+}
+
+#python-credit button{
+    background-color: #F2F0EA;
+    color: #582C12;
+    font-size: 23px;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+
+#python-credit:hover{
+    border: 3px solid #F2F0EA;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+#python-credit button:hover{
+    background-color: #BFA181;
+    color: #F2F0EA;
+}
+
+#git-credit{
+    border: 1.5px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#git-credit a{
+    text-decoration: none;
+}
+
+#git-credit-img{
+    border-radius: 7px;
+}
+
+#git-credit button{
+    background-color: #F2F0EA;
+    color: #582C12;
+    font-size: 23px;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+
+#git-credit:hover{
+    border: 3px solid #F2F0EA;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+#git-credit button:hover{
+    background-color: #BFA181;
+    color: #F2F0EA;
+}
+
+#linux-credit{
+    border: 1.5px solid #F2F0EA;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#linux-credit a{
+    text-decoration: none;
+}
+
+#linux-credit-img{
+    border-radius: 7px;
+}
+
+#linux-credit button{
+    background-color: #F2F0EA;
+    color: #582C12;
+    font-size: 23px;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
+
+#linux-credit:hover{
+    border: 3px solid #F2F0EA;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+#linux-credit button:hover{
+    background-color: #BFA181;
+    color: #F2F0EA;
+}
+
+
+/* contact*/
+
+#contact{
+    width: 100%;
+    padding: 4% 3% 0 3%;
+    background-color: #0A1828;
+}
+.input-group{
+   
+    justify-content: center;
+}
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 33px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #F2F0EA;
+    padding: 0 30px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.input-group input{
+    width:500px;
+    height: 50px;
+    font-size: 17px;
+    color: #F2F0EA;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1.2px solid #F2F0EA;
+    outline: none;
+    border-radius: 10px;
+}
+
+.input-group input:focus{
+    border: 2px solid #0FFCBE;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label{
+    color: #0FFCBE;
+    top: 0;
+    font-size: 16px;
+    padding: 0 10px;
+    background: #0A1828;
+    transform: translate(-2px,-11px) scale(0.88);
+}
+
+#msg placeholder{
+    position: absolute;
+    font-size: 18px;
+    color: #F2F0EA;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .3s;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    
+}
+
+#msg textarea{
+    width: 340px;
+    height: 200px;
+    font-size: 23px;
+    color: #F2F0EA;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1.2px solid #F2F0EA;
+    outline: none;
+    border-radius: 10px;
+}
+
+#msg textarea:hover{
+    border: 2px solid #0FFCBE;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+#msg-btn{
+    background: transparent;
+    width: 110px;
+    height: 45px;
+    color: #F2F0EA;
+    padding: 1px 5px;
+  
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+#msg-btn #button-2{
+    border:2px solid goldenrod;
+    color:white;
+    font-weight: bolder;
+}
+#msg-btn #button-2:hover{
+    background-color: goldenrod;
+    border:2px solid #582C12;
+    color: black; 
+    animation: shakeBtn .7s both;
+    transform: translate3d(-1px,0,0);
+}
+
+@keyframes shakeBtn{
+    0%,
+    90%{
+        transform: translate3d(-1px,0,0);
+    }
+    20%, 80%{
+        transform: translate3d(2px,0,0);
+    }
+    30%, 50%, 70%{
+        transform: translate3d(-4px,0,0);
+    }
+    40%, 60%{
+        transform: translate3d(4px,0,0);
+    }
+}
+
+#socio-link{
+    padding: 0% 15%;
+    font-size: 2.5rem;
+    color: #F2F0EA;
+}
+
+#socio-link i:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: all .3s ease;
+}
+
